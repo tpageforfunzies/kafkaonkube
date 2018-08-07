@@ -1,0 +1,18 @@
+---
+ apiVersion: extensions/v1beta1
+ kind: Deployment
+ metadata:
+   name: crudapp
+ spec:
+   replicas: 2
+   template:
+     metadata:
+       labels:
+         app: web
+     spec:
+       containers:
+         - name: crud-app
+           image: crudapp:v3.2
+           imagePullPolicy: Never
+           ports:
+             - containerPort: 5000
