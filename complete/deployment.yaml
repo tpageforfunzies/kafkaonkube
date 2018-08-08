@@ -12,7 +12,6 @@
      spec:
        containers:
          - name: crud-app
-           image: crudapp:v3.2
-           imagePullPolicy: Never
+           image: tpageforfunzies/crudapp:v1
            ports:
              - containerPort: 5000
